@@ -66,11 +66,11 @@ Add all workers to the crontab:
 To add Jobs to the Queue, simply call the service and add a new Job:
 ``` php
 // use a specific worker
-$this->getContainer()->get('scandio.job_manager')->queueRandom('default', 'php -r \'echo "hello\n";\'');
+$this->getContainer()->get('scandio.job_manager')->queue('default', 'php -r \'echo "hello\n";\'');
 // choose a random worker
 $this->getContainer()->get('scandio.job_manager')->queueRandom('php -r \'echo "hello\n";\'');
-// choose a random worker with higher priority
-$this->getContainer()->get('scandio.job_manager')->queueRandom('php -r \'echo "hello\n";\'', Job::PRIORITY_HIGHER);
+// add a job with higher priority
+$this->getContainer()->get('scandio.job_manager')->queue('default', 'php -r \'echo "hello\n";\'', Job::PRIORITY_HIGHER);
 ```
 
 ### Queue Manager
