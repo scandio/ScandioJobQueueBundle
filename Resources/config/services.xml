@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="scandio.job_manager.manager.class">Scandio\JobQueueBundle\Service\JobManager</parameter>
+        <parameter key="scandio.job_manager.enable_worker_randomization">true</parameter>
+    </parameters>
+
+    <services>
+        <service id="scandio.job_manager" class="%scandio.job_manager.manager.class%">
+            <argument type="service" id="service_container" />
+            <argument>%scandio.job_manager.workers%</argument>
+            <argument>%scandio.job_manager.enable_worker_randomization%</argument>
+        </service>
+    </services>
+</container>

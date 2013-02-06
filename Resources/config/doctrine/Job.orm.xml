@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity repository-class="Scandio\JobQueueBundle\Entity\JobRepository" name="Scandio\JobQueueBundle\Entity\Job" table="queue_jobs">
+    <change-tracking-policy>DEFERRED_IMPLICIT</change-tracking-policy>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="workerName" type="string" column="worker_name" length="255" precision="0" scale="0"/>
+    <field name="command" type="string" column="command" length="255" precision="0" scale="0"/>
+    <field name="state" type="integer" column="state" precision="0" scale="0"/>
+    <field name="priority" type="integer" column="priority" precision="0" scale="0"/>
+    <field name="output" type="text" column="output" precision="0" scale="0" nullable="true"/>
+    <field name="createdAt" type="datetime" column="created_at" precision="0" scale="0"/>
+    <field name="startedAt" type="datetime" column="started_at" precision="0" scale="0" nullable="true"/>
+    <field name="finishedAt" type="datetime" column="finished_at" precision="0" scale="0" nullable="true"/>
+    <lifecycle-callbacks/>
+  </entity>
+</doctrine-mapping>
