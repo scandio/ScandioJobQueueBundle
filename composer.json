@@ -1,0 +1,32 @@
+{
+    "name": "scandio/job-queue-bundle",
+    "type": "symfony-bundle",
+    "description": "A Symfony2 queue system. With this bundle, you can send commands to a queue, which will be performed according to the crontab.",
+    "keywords": ["queue", "jobs", "crontab", "cronjob", "symfony2", "bundle", "scandio"],
+    "homepage": "https://github.com/scandio/ScandioJobQueueBundle",
+    "license": "MIT",
+
+    "authors": [
+        {
+            "name": "Scandio GmbH",
+            "homepage": "http://www.scandio.de/"
+        },
+        {
+            "name": "Veit Osiander",
+            "homepage": "https://github.com/siklol"
+        }
+    ],
+
+    "require": {
+        "php":                      ">=5.3.3",
+        "symfony/framework-bundle": "~2.0"
+    },
+
+    "autoload": {
+        "psr-0": {
+            "Scandio\\JobQueueBundle": ""
+        }
+    },
+
+    "target-dir": "Scandio/JobQueueBundle"
+}
