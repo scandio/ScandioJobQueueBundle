@@ -30,13 +30,13 @@ Install via composer.json:
 
 If you use a `deps` file, add:
 
-    [ScandioPaginatorBundle]
+    [ScandioJobQueueBundle]
         git=https://github.com/scandio/ScandioJobQueueBundle.git
         target=bundles/Scandio/JobQueueBundle
 
 Or if you want to clone the repos:
 
-    # Install Paginator
+    # Install Job Queue
     git clone https://github.com/scandio/ScandioJobQueueBundle.git vendor/bundles/Scandio/JobQueueBundle
 
 ## Usage
