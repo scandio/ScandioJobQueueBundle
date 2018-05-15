@@ -1,7 +1,7 @@
 ScandioJobQueueBundle
 =====================
 
-A Symfony2 queue system.
+A Symfony queue system.
 
 With this bundle, you can send commands to a queue, which will be performed according to the crontab.
 
