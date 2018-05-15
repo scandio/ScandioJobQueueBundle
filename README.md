@@ -44,7 +44,7 @@ Or if you want to clone the repos:
 ### Crontab
 Just include the Scandio\JobQueueBundle\ScandioJobQueueBundle() in your AppKernel.php and activate it with the following crontab:
 ```
-* * * * * php /var/www/project/app/console scandio:job-queue:worker --maxJobs="250" # runs every minute
+* * * * * php /var/www/project/bin/console scandio:job-queue:worker --maxJobs="250" # runs every minute
 ```
 
 If you want to use more than one worker, add the following lines to the app/config/config.yml:
@@ -56,10 +56,10 @@ scandio_job_queue:
 
 Add all workers to the crontab:
 ```
-* * * * * php /var/www/project/app/console scandio:job-queue:worker --maxJobs="250" # runs every minute # default is always used!
-* * * * * php /var/www/project/app/console scandio:job-queue:worker --maxJobs="250" "load_balance_first"
-* * * * * php /var/www/project/app/console scandio:job-queue:worker --maxJobs="250" "load_balance_second"
-* * * * * php /var/www/project/app/console scandio:job-queue:worker --maxJobs="250" "load_balance_third"
+* * * * * php /var/www/project/bin/console scandio:job-queue:worker --maxJobs="250" # runs every minute # default is always used!
+* * * * * php /var/www/project/bin/console scandio:job-queue:worker --maxJobs="250" "load_balance_first"
+* * * * * php /var/www/project/bin/console scandio:job-queue:worker --maxJobs="250" "load_balance_second"
+* * * * * php /var/www/project/bin/console scandio:job-queue:worker --maxJobs="250" "load_balance_third"
 ```
 
 ### Add Jobs
