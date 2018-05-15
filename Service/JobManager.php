@@ -101,11 +101,11 @@ class JobManager
             $statistics[$workerName] = array(
                 'isLocked' => (int) ($isLockedSince instanceof \DateTime),
                 'isLockedSince' => $isLockedSince instanceof \DateTime ? $isLockedSince->format('d.m.Y H:i:s') : '',
-                'finished' => $jobRepository->count($workerName, Job::STATE_FINISHED),
-                'queued' => $jobRepository->count($workerName, Job::STATE_QUEUE),
-                'active' => $jobRepository->count($workerName, Job::STATE_ACTIVE),
-                'paused' => $jobRepository->count($workerName, Job::STATE_PAUSED),
-                'inactive' => $jobRepository->count($workerName, Job::STATE_INACTIVE),
+                'finished' => $jobRepository->countJobs($workerName, Job::STATE_FINISHED),
+                'queued' => $jobRepository->countJobs($workerName, Job::STATE_QUEUE),
+                'active' => $jobRepository->countJobs($workerName, Job::STATE_ACTIVE),
+                'paused' => $jobRepository->countJobs($workerName, Job::STATE_PAUSED),
+                'inactive' => $jobRepository->countJobs($workerName, Job::STATE_INACTIVE),
                 'dead' => (int) $lockRepository->isDead($workerName)
             );
         }

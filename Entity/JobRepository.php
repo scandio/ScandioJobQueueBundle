@@ -126,7 +126,7 @@ SQL;
      * @param $state
      * @return mixed
      */
-    public function count($workerName, $state)
+    public function countJobs($workerName, $state)
     {
         $dbal = $this->getEntityManager()->getConnection();
 
